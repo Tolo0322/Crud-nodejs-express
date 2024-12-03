@@ -1,0 +1,48 @@
+ <style>
+    .neon-text-success {
+      font-size: 60px;
+      font-weight: bold;
+      color: #28a745; /* Color verde de Bootstrap Success */
+      text-shadow: 
+        0 0 10px #28a74550,  /* Sombra verde (difusa) */
+        0 0 15px #28a74550,  /* Sombra verde más fuerte */
+        0 0 20px #28a74550,  /* Más sombra verde */
+        0 0 25px #28a74550,  /* Sombra aún más fuerte */
+        0 0 30px #28a74550,  /* Mayor intensidad */
+        0 0 35px #28a74550;  /* Efecto final muy brillante */
+    }
+        .custom-shadow {
+        box-shadow: 0px 15px 15px #28a74550,
+                    0px 0px 20px #28a74550;
+        }
+        .custom-shadow2 {
+        box-shadow: 0px 0px 15px #28a74590,
+                    0px 0px 0px #28a74590;
+        }
+</style>
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto w-50 p-0 custom-shadow rounded-4">
+            <div class="card text-center bg-dark text-success">
+                <div class="card-header" >
+                    <h3 class="text-uppercase">Crear nuevo integrante</h3>
+                </div>
+                <div class="card-body">
+                    <form action="/add" method="post" class="p-2 custom-shadow2 rounded-2" >
+                        <div class="input-group mt-2">
+                            <label for="name" class="input-group-text mx-1">Nombre</label>
+                            <input class="form-control" type="text" name="name" id="name" placeholder="Ejemplo: Luis angel" autofocus required> 
+                        </div>
+                        <div class="input-group mt-2">
+                            <label for="role" class="input-group-text mx-1">Rol</label>
+                            <input class="form-control" type="text" name="role" id="role" placeholder="Ejemplo: Desarrollador frontend" required> 
+                        </div>
+                        <div class="form-group mt-4 d-grid gap-2">
+                            <button class="btn btn-succes text-primary fw-bold border-primary">Crear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

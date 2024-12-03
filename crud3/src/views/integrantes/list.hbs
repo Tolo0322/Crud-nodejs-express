@@ -1,0 +1,49 @@
+<div class="container ">
+    <div class="row mt-5 bg-success">
+        <h3 class="text-center">Lista de integrantes</h3>
+        {{#if integrantes}}
+        
+            <table class=" table text-center">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each integrantes}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{role}}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="/edit/{{id}}" class="btn btn-warning m-1">
+                                <i class="fa-solid fa-pencil"></i></a>
+                                <a href="/delete/{{id}}" class="btn btn-danger m-1">
+                                <i class="fa-solid fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+                <tfoot>
+                    <tr class="table-dark text-center">
+                        <td colspan="4">Registro de integrantes</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </class=>
+        {{else}}
+            <div class="card text-center mx-auto" style="width: 350px">
+                <div class="card-header">
+                   <h3>Debes crear un integrante</h3> 
+                   <div class="card-body">
+                        <p>Presiona este boton para que puedas registrar el integrante en la aplicacion</p>
+                        <a href="#" class="btn btn-primary">Ir a crear</a>
+                   </div>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>
